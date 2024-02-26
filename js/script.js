@@ -1,5 +1,16 @@
+/* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
+$(document).ready(function () {
+    $(".header_hamburger").click(function () {
+        $(".header").toggleClass('active');
+    });
+});
+
+/* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
+
+
+/* ーーーーーーーーーーザキstartーーーーーーーーーーーーーーー */
 //スライドを動かすためのJS設定
-$(function(){
+$(function () {
     $('.carouselarea').slick({
         centerMode: true,//スライドを中心にして表示、部分的に前後のスライドが見える設定
         slidesToShow: 3,//一度に表示するスライド数
@@ -21,18 +32,24 @@ $(function(){
                 },
             },
         ],
-    }); 
+    });
 });
 
 //featureエリアのモーション設定
-$(window).scroll(function (){
-    $('.grid-box').each(function(){
+$(window).scroll(function () {
+    $('.grid-box').each(function () {
         var elemPos = $(this).offset().top,
-        scroll = $(window).scrollTop(),
-        windowHeight = $(window).height();
+            scroll = $(window).scrollTop(),
+            windowHeight = $(window).height();
 
-            if (scroll > elemPos - windowHeight + 150){
-                $(this).addClass('scrollin');
-            }
+        if (scroll > elemPos - windowHeight + 150) {
+            $(this).addClass('scrollin');
+        }
     });
 });
+/* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
+
+
+/* ーーーーーーーーーーコウstartーーーーーーーーーーーーーーー */
+
+/* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
