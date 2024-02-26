@@ -10,6 +10,150 @@
 
 /* PC・SP共通用 */
 /* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
+.header {
+  background-color: #fff;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header_logoText {
+  font-weight: normal;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーーーーハンバーガーーーーーーーーーーーーーーーーーーーーー */
+
+/* ボタン部分ーーーーーーーーーーーーーーーーーーーー */
+.header_hamburger {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+  z-index: 120;
+}
+
+.header_hamburgerLineArea {
+  transition: all .4s;
+}
+
+.header_hamburgerLine {
+  display: block;
+  content: "";
+  background-color: #000;
+  height: 2px;
+  width: 35px;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: all .4s;
+  opacity: 1;
+}
+
+.header_menu {
+  position: absolute;
+  top: 0;
+  left: -250px;
+  height: 100vh;
+  width: 250px;
+  background-color: #373737;
+  padding: 50px 20px;
+  transition: all .4s;
+  z-index: 120;
+  opacity: 0;
+}
+
+
+/* 左側のメニュー部分ーーーーーーーーーーーーーーーーーーーー */
+.header_menuArea {
+  padding: 0;
+}
+
+.header_menuItem {
+  list-style: none;
+}
+
+.header_menuItem:first-of-type {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.header_menuItem:nth-of-type(2),
+.header_menuItem:nth-of-type(3) {
+  border-bottom: 1px solid #fff;
+}
+
+.header_menuItemLink {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.header_menuItem:first-of-type .header_menuItemLink,
+.header_menuItem:nth-of-type(2) .header_menuItemLink,
+.header_menuItem:nth-of-type(3) .header_menuItemLink {
+  padding: 20px 0;
+}
+
+.header_menuItem:nth-of-type(4) {
+  margin-top: 50px;
+}
+
+
+.header_menuItem:nth-of-type(5),
+.header_menuItem:nth-of-type(6) {
+  margin-top: 20px;
+}
+
+/* ハンバーガーがactiveになったときーーーーーーーーーーーーーーーーーーーー */
+/* ボタン部分ーーーーーーーーーーーーーーーーーーーー */
+.active .header_hamburgerLine {
+  background-color: #fff;
+}
+
+.active .header_hamburgerLine:first-of-type {
+  transform: translateY(11px) rotate(-135deg);
+}
+
+.active .header_hamburgerLine:nth-of-type(2) {
+  opacity: 0;
+}
+
+.active .header_hamburgerLine:last-of-type {
+  transform: translateY(-12px) rotate(135deg);
+}
+
+/* 黒っぽい背景ーーーーーーーーーーーーーーーーーーーー */
+.header.active::after {
+  display: block;
+  content: "";
+  opacity: 0.8;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .4s;
+  background-color: #000;
+  z-index: 110;
+}
+
+/* メニュー出現ーーーーーーーーーーーーーーーーーーーー */
+.active .header_menu {
+  left: 0;
+  opacity: 1;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーkvーーーーーーーーーーーーーーーーーーーー */
+.kv {
+  position: relative;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーkvにテキスト挿入する場合ーーーーーーーーーーーーーーーーーーーー */
+.kv_newLine {
+  display: inline-block;
+}
 
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
@@ -27,7 +171,55 @@
 
 /* PC用 */
 @media screen and (min-width: 769px) {
+
   /* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
+  .header {
+    padding: 20px 40px;
+  }
+
+  .kv {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .kv_imgWrap {
+    height: 100vh;
+  }
+
+  .kv_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 100% 0%;
+  }
+
+  .kv_textArea {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    /* top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .kv_text {
+    /* width: 100%;
+    text-align: left;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(5rem + 1vw, 8rem + 1vw, 13rem + 1vw);
+    color: #fff; */
+    width: 90%;
+
+  }
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
@@ -45,7 +237,11 @@
 
 /* SP用 */
 @media screen and (max-width: 768px) {
+
   /* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
+  .header {
+    padding: 20px 20px;
+  }
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
