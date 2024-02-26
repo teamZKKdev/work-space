@@ -33,14 +33,39 @@
       </main>
 
       <!-- ーーーーーーーーーーーーーーーコウstartーーーーーーーーーーーーーーー -->
-      <div>
-        <div>
+      <section id="contact">
+        <h2 class="contact-title">CONTACT</h2>
+        <div class="content">
+          <div class="info">
+            <p>
+              弊社にご質問やご意見がありましたら、以下のフォームをご利用ください。<br>
+              お問い合わせ内容に関する詳細な情報を提供いただけると、より迅速かつ正確な回答ができます。
+              必要事項をご入力の上、確認ボタンをクリックしてください。
+            </p>
+          </div>
 
+          <!--入力画面-->
+          <div class="contact-form">
+            <form action="confirmation.php" method="post">
+              <dl>
+                <dt><label for="name">Name: </label></dt>
+                <dd><input type="text" id="name" name="username" required></dd>
+
+                <dt><label for="email">Mail: </label></dt>
+                <dd><input type="text" id="email" name="useremail" required></dd>
+                
+                <dt><label for="message">Message: </label></dt>
+                <dd><textarea id="message" name="inquiry" required></textarea></dd>
+              </dl>
+              <div class="button" ><input type="submit" value="確認"></div>
+            </form>
+          </div>
         </div>
-        <footer>
+      </section>
 
-        </footer>
-      </div>
+      <footer id="footer">
+        <p>&copy; Sneakers</p>
+      </footer>
     </div>
   </body>
 
