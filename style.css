@@ -253,10 +253,99 @@
   margin: 30px 20px 20px 20px;
 }
 
-.dyas {
+.days {
   text-align: right;
   margin-right: 20px;
   margin-bottom: 40px;
+}
+
+.sub-page {
+  display: flex;
+}
+
+.sub-item {
+  position: relative;
+  margin-bottom: 0.2rem;
+  padding: 1rem 0;
+  border-bottom: 5px solid;
+  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.sub-item::before {
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0rem;
+  right: 0rem;
+  border-bottom: 1px solid;
+  content: ' ';
+}
+
+.sneaker-menu {
+  display: flex;
+  align-items: center; /* センター揃え */
+  margin: 50px; /* 適切なマージンを追加 */
+}
+
+.sneaker-img img {
+  max-width: 100%; /* 画像が親要素内に収まるように */
+  height: auto; /* アスペクト比を保つために自動調整 */
+  margin-right: 40px;
+}
+
+.sneaker-boxs {
+  margin-left: 60px; /* ボックスと画像の間に適切なスペースを追加 */
+}
+
+.item-text {
+  margin-top: 40px;
+  font-size: 26px;
+}
+
+.item-money {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #ff32fe;
+}
+
+.selectbox-size {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.selectbox-size::after {
+  position: absolute;
+  right: 15px;
+  width: 10px;
+  height: 7px;
+  background-color: #535353;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  content: '';
+  pointer-events: none;
+}
+
+.selectbox-size select {
+  appearance: none;
+  min-width: 230px;
+  height: 2.8em;
+  padding: .4em calc(.8em + 30px) .4em .8em;
+  border: none;
+  border-bottom: 2px solid #686464;
+  background-color: #fff;
+  color: #333333;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.selectbox-size select:focus {
+  outline: none;
+}
+
+.buy-btn {
+  margin-right: 30px;
 }
 
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
