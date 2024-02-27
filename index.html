@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers</title>
     <link rel="icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <!-- css追加ザキ -->
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
@@ -15,6 +18,9 @@
   </head>
 
   <body>
+    <div id="loading">
+      <div id="loading_text"></div>
+    </div>
     <div>
       <!-- ーーーーーーーーーーーーーーーカナstartーーーーーーーーーーーーーーー -->
       <header class="header">
@@ -33,99 +39,100 @@
             <li class="header_menuItem"><a class="header_menuItemLink" href="#pickUp">PICK UP</a></li>
             <li class="header_menuItem"><a class="header_menuItemLink" href="#feature">FEATURE</a></li>
             <li class="header_menuItem"><a class="header_menuItemLink" href="#contact">CONTACT</a></li>
-            <li class="header_menuItem"><a class="header_menuItemLink" href="https://twitter.com/?lang=ja">Twitter</a>
+            <li class="header_menuItem"><a class="header_menuItemLink" href="https://twitter.com/?lang=ja"
+                target="_blank" rel="noopener noreferrer">Twitter</a>
             </li>
-            <li class="header_menuItem"><a class="header_menuItemLink" href="#pickUp">Facebook</a></li>
-            <li class="header_menuItem"><a class="header_menuItemLink" href="#pickUp">Instagram</a></li>
+            <li class="header_menuItem"><a class="header_menuItemLink" href="https://www.facebook.com/?locale=ja_JP"
+                target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li class="header_menuItem"><a class="header_menuItemLink" href="https://www.instagram.com/" target="_blank"
+                rel="noopener noreferrer">Instagram</a></li>
           </ul>
         </nav>
       </header>
       <div class="kv">
         <div class="kv_imgWrap">
-          <!-- <img class="kv_img" src="./img/kv.jpg" alt="shoes_nike"> -->
           <img class="kv_img" src="./img/kv.png" alt="shoes_nike">
         </div>
         <div class="kv_textArea">
-          <img class="kv_text" src="./img/text.png" alt="NO SHOES is NO LIFE">
-          <!-- <h2 class="kv_text">NO SHOES <span class="kv_newLine">is</span> <span class="kv_newLine">NO LIFE</span></h2> -->
+          <h2 class="kv_text">NO SNEAKERS is NO LIFE.</h2>
         </div>
       </div>
 
       <!-- ーーーーーーーーーーーーーーーザキstartーーーーーーーーーーーーーーー -->
       <main>
         <!-- PICK UPのところ -->
-        <div class="mainpick">
+        <div class="mainpick" id="pickUp">
           <h2 class="pick">PICK UP</h2>
           <ul class="carouselarea" id="js-carouselarea">
-            <li calss="carousel-list"><img class="class-img" src="img/pickup1.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup2.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup3.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup4.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup5.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup6.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup7.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup8.jpg"></li>
-            <li calss="carousel-list"><img class="class-img" src="img/pickup9.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup1.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup2.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup3.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup4.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup5.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup6.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup7.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup8.jpg"></li>
+            <li class="carousel-list"><img class="class-img" src="img/pickup9.jpg"></li>
           </ul>
         </div>
         <!-- メニュー並ぶところ -->
         <div class="sabmain">
-          <h2 class="feature">FEATURE</h2>
+          <h2 class="feature" id="feature">FEATURE</h2>
           <div>
             <div class="container">
               <div class="grid-box">
                 <img src="img/feature1.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker001</p>
                 <p class="featuretext">白い靴は汚れに注意だね</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature2.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker002</p>
                 <p class="featuretext">オレンジのパンチ効いてるね</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature3.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker003</p>
                 <p class="featuretext">キュウイシューズ！！</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature4.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker004</p>
                 <p class="featuretext">ピンク&ネイビーはサイコ〜！！</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature5.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker005</p>
                 <p class="featuretext">山登りそう？</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature6.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker006</p>
                 <p class="featuretext">靴下濡れちゃう</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature7.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker007</p>
                 <p class="featuretext">忘れ物です</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature8.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker008</p>
                 <p class="featuretext">これ欲しいなあ</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
               <div class="grid-box">
                 <img src="img/feature9.jpg">
-                <p class="category">category</p>
+                <p class="category">Sneaker009</p>
                 <p class="featuretext">メタリックシューズ</p>
-                <p class="dyas">2024.03.04</p>
+                <p class="days">2024.03.04</p>
               </div>
             </div>
           </div>
@@ -170,6 +177,7 @@
     <!-- ザキ追加 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 
