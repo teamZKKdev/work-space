@@ -10,17 +10,54 @@
 
 /* PC・SP共通用 */
 /* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーロード画面ーーーーーーーーーーーーーーーーーーーー */
+#loading {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  color: #000;
+}
+
+/* Loadingバー中央配置　*/
+#loading_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  color: #202020;
+}
+
+
 .header {
-  background-color: #fff;
+  background-color: transparent;
   position: fixed;
   z-index: 100;
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: space-between;
+  transition: 0.5s;
+}
+
+.header.changeColor {
+  background-color: #fff;
 }
 
 .header_logoText {
   font-weight: normal;
+  color: #fff;
+}
+
+.changeColor .header_logoText {
+  color: #000;
 }
 
 
@@ -42,7 +79,7 @@
 .header_hamburgerLine {
   display: block;
   content: "";
-  background-color: #000;
+  background-color: #fff;
   height: 2px;
   width: 35px;
   margin: 0 auto;
@@ -62,6 +99,14 @@
   transition: all .4s;
   z-index: 120;
   opacity: 0;
+}
+
+.changeColor .header_hamburgerLine {
+  background-color: #000;
+}
+
+.header.hide {
+  transform: translateY(-100%);
 }
 
 
@@ -155,6 +200,26 @@
   display: inline-block;
 }
 
+.kv_text span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.kv_text::after {
+  content: "|";
+  animation: typinganime .8s ease infinite;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
@@ -175,18 +240,23 @@
   display: block;
   width: 600px;
   height: 300px;
-  object-fit: cover; 
-  opacity: .3; /* 両サイドのスライドを薄くする */
-  transform: scale(.8); /* 両サイドのスライドのサイズを小さくする */
-  transition: opacity .5s, transform .5s; /* 透過とアニメーションの時間設定 */
+  object-fit: cover;
+  opacity: .3;
+  /* 両サイドのスライドを薄くする */
+  transform: scale(.8);
+  /* 両サイドのスライドのサイズを小さくする */
+  transition: opacity .5s, transform .5s;
+  /* 透過とアニメーションの時間設定 */
 }
 
 .carouselarea .slick-center img {
-  opacity: 1; /* 中央の画像は透過しない */
-  transform: scale(1); /* サイズも通常のまま */
+  opacity: 1;
+  /* 中央の画像は透過しない */
+  transform: scale(1);
+  /* サイズも通常のまま */
 }
 
-.carouselarea li{
+.carouselarea li {
   overflow: visible !important;
 }
 
@@ -221,12 +291,13 @@
 .grid-box {
   box-shadow: 0 0 10px 5px #ccc;
   opacity: 0;
-  transform: translate(0,0);
+  transform: translate(0, 0);
   transition: all 1.5s;
-  transform: translate(0,30px);
-  &.scrollin{
+  transform: translate(0, 30px);
+
+  &.scrollin {
     opacity: 1 !important;
-    transform: translate(0,0) !important;
+    transform: translate(0, 0) !important;
   }
 }
 
@@ -234,9 +305,11 @@
   max-width: 100%;
 }
 
-.grid-box{ overflow: hidden;}
+.grid-box {
+  overflow: hidden;
+}
 
-.grid-box img:hover{
+.grid-box img:hover {
   transform: scale(1.3);
   transition: 0.3s;
 }
@@ -268,6 +341,7 @@
   background-color: #121212;
   padding: 50px 0;
 }
+
 #contact .contact-title,
 #confirmation .title {
   color: #fff;
@@ -275,6 +349,7 @@
   display: flex;
   justify-content: center;
 }
+
 #contact .content {
   max-width: 1240px;
   padding: 0 16px;
@@ -282,14 +357,17 @@
   display: flex;
   justify-content: space-between;
 }
+
 #contact .info p {
   padding: 20px;
   margin-bottom: 30px;
 }
+
 #contact .info,
 #contact .contact-form {
   width: 45%;
 }
+
 #contact .contact-form input,
 #contact .contact-form textarea {
   width: 100%;
@@ -297,6 +375,7 @@
   padding: 10px;
   margin-bottom: 20px;
 }
+
 #contact .contact-form .button input {
   width: 200px;
   color: #fff;
@@ -305,10 +384,12 @@
   padding: 12px 0;
   margin-bottom: 0;
 }
+
 #contact .contact-form .button input:hover {
   color: #202020;
   background-color: #fff;
 }
+
 #footer {
   color: #fff;
   background-color: #121212;
@@ -316,29 +397,35 @@
   padding: 10px;
   font-size: 0.75rem;
 }
+
 #confirmation {
   color: #fff;
   background-color: #121212;
   padding: 50px 0;
 }
+
 #confirmation .confirmation-form {
   display: flex;
   justify-content: center;
 }
+
 #confirmation .confirmation-info {
   padding: 20px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
+
 #confirmation .confirmation-form table {
   height: 25vh;
   width: 30vw;
 }
+
 #confirmation .submit {
   display: flex;
   justify-content: center;
 }
+
 #confirmation .submit button {
   display: flex;
   justify-content: center;
@@ -346,6 +433,7 @@
   width: 50%;
   font-weight: bold;
 }
+
 /*#confirmation .data dl {
   width: 100%;
 }*/
@@ -383,26 +471,21 @@
     z-index: 10;
     width: 100%;
     position: absolute;
-    /* top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); */
-    bottom: 0;
+    left: 0;
+    bottom: 2%;
     display: flex;
     justify-content: center;
   }
 
   .kv_text {
-    /* width: 100%;
-    text-align: left;
+    width: 100%;
+    text-align: center;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(5rem + 1vw, 8rem + 1vw, 13rem + 1vw);
-    color: #fff; */
+    font-size: clamp(5rem + 0.5vw, 6rem + 3vw, 13rem + 0.5vw);
+    color: #fff;
     width: 90%;
-
   }
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
@@ -427,17 +510,56 @@
     padding: 20px 20px;
   }
 
+  .kv {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .kv_imgWrap {
+    height: 100vh;
+  }
+
+  .kv_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 85% 0%;
+  }
+
+  .kv_textArea {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .kv_text {
+    width: 100%;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(2rem + 1vw, 4rem + 1vw, 8rem + 1vw);
+    color: #fff;
+    width: 90%;
+  }
+
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
   /* ーーーーーーーーーーザキstartーーーーーーーーーーーーーーー */
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
 
-}
+  }
 
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
@@ -447,20 +569,25 @@
   #contact {
     padding: 80px 0;
   }
+
   #contact .content {
     flex-direction: column;
   }
+
   .contact-title {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
+
   #contact .info,
   #contact .contact-form,
   #confirmation .confirmation-form table {
     width: 100%;
   }
+
   #contact .contact-form .button input {
     width: 100%;
   }
+
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 }
