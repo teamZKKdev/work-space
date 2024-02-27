@@ -8,7 +8,7 @@
 </head>
 <body>
 <section id="confirmation">
-    <h2 class="title">お問い合わせ内容</h2>
+    <h1 class="title">お問い合わせ内容</h1>
     <div class="confirmation-info">
         <p>お問い合わせ内容はこちらで宜しいでしょうか？<br>
            よろしければ「送信する」ボタンを押して下さい。
@@ -17,35 +17,35 @@
 
     <div class="confirmation-form">
         <form action="thanks.php" method="post">
-            <!-- <table border="1">
-                <tr>
-                    <td>名前</td>
-                    <td><?php echo isset($_POST["username"]) ? htmlspecialchars($_POST["username"]) : "" ?></td>
-                </tr>
-                <tr>
-                    <td>メールアドレス</td>
-                    <td><?php echo isset($_POST["useremail"]) ? htmlspecialchars($_POST["useremail"]) : "" ?></td>
-                </tr>
-                <tr>
-                    <td>お問い合わせ内容</td>
-                    <td><?php echo isset($_POST["inquiry"]) ? htmlspecialchars($_POST["inquiry"]) : "" ?></td>
-                </tr>
-            </table> -->
+            <div class="contact-group">
+                <ul class="contact-list">
+                    <li><h5>Name: </h5></li>
+                    <li><?php echo isset($_POST["username"]) ? htmlspecialchars($_POST["username"]) : "" ?></li>
+                </ul>
+                <ul class="contact-list">
+                    <li><h5>Mail: </h5></li>
+                    <li><?php echo isset($_POST["useremail"]) ? htmlspecialchars($_POST["useremail"]) : "" ?></li>
+                </ul>
+                <ul class="contact-list">
+                    <li><h5>Message: </h5></li>
+                    <li><?php echo isset($_POST["inquiry"]) ? nl2br(htmlspecialchars($_POST["inquiry"])) : "" ?></li>
+                </ul>
+            </div>
 
-            <div class="data">
+            <!-- <div class="data">
                 <dl>
-                    <dt>名前: </dt>
+                    <dt>Name: </dt>
                     <dd><?php echo isset($_POST["username"]) ? htmlspecialchars($_POST["username"]) : "" ?></dd>
                 </dl>
                 <dl>
-                    <dt>メールアドレス: </dt>
+                    <dt>Mail: </dt>
                     <dd><?php echo isset($_POST["useremail"]) ? htmlspecialchars($_POST["useremail"]) : "" ?></dd>
                 </dl>
                 <dl>
-                    <dt>お問い合わせ内容: </dt>
+                    <dt>Message: </dt>
                     <dd><?php echo isset($_POST["inquiry"]) ? htmlspecialchars($_POST["inquiry"]) : "" ?></dd>
                 </dl>
-            </div>
+            </div> -->
 
             <div class="submit">
                 <!--戻るを押すと前の画面に遷移-->
