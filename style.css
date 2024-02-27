@@ -301,7 +301,7 @@
   width: 200px;
   color: #fff;
   background-color: #121212;
-  border: solid 1px #fff;
+  border: solid 1px #fff;       /*  左だけ伸びているからサイズ見直し（センターに寄せたり）*/
   padding: 12px 0;
   margin-bottom: 0;
 }
@@ -316,15 +316,23 @@
   padding: 10px;
   font-size: 0.75rem;
 }
+/*確認画面*/
 #confirmation {
   color: #fff;
   background-color: #121212;
-  padding: 50px 0;
+  /* padding: 50px 0; */
+  width: auto;
+  overflow-x: hidden;
 }
 #confirmation .confirmation-form {
   display: flex;
   justify-content: center;
 }
+/* #confirmation .confirmation-form .contact-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
 #confirmation .confirmation-info {
   padding: 20px;
   margin-bottom: 30px;
@@ -349,6 +357,19 @@
 /*#confirmation .data dl {
   width: 100%;
 }*/
+
+/* 確認画面のリストの点消し */
+#confirmation ul {
+  /*リストの左寄せ（必要ならコメント解除）
+  padding-left: 0;*/
+  margin-bottom: 10%;
+  border-bottom: solid 1px #fff;
+  width: 200%;
+}
+#confirmation .contact-list li {
+  list-style: none;
+  font-size: large;
+}
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
