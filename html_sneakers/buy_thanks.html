@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sneakers</title>
     <link rel="icon" href="../img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <!-- css追加ザキ -->
     <link rel="stylesheet" href="../slick/slick.css">
     <link rel="stylesheet" href="../slick/slick-theme.css">
@@ -40,8 +43,13 @@
         </nav>
   </header>
   <main>
-    <div>
-      <p>購入ありがとうございました！！</p>
+    <div class="buy-color">
+        <div class="present-box">
+          <img src="../img/present_box.png">
+        </div>
+        <div>
+          <p class="thanks-buy">Thank you for purchasing</p>
+        </div>
     </div>
 
 
@@ -53,5 +61,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../slick/slick.min.js"></script>
   <script src="../js/script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+  <script>
+    confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+          });
+    </script>
 </body>
 </html>
