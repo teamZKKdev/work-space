@@ -337,7 +337,7 @@
 
 .sub-page {
   width: auto;
-  height: auto;
+  height: calc(100vh - 90px - 38px);
   padding: 30px;
 }
 
@@ -418,8 +418,6 @@
   outline: none;
 }
 
-
-
 .buy-btn {
   margin-top: 20px;
   margin-left: 30px;
@@ -451,6 +449,28 @@
   background-position: 0 0;
   color: #000; /* 文字色 */
 }
+
+.buy-color {
+  background-color: #107CFF;
+  height: calc(100vh - 90px - 38px);
+}
+
+.present-box {
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.thanks-buy {
+  width: 100%;
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #fff;
+}
+
 
 
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
