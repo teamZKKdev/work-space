@@ -337,8 +337,7 @@
 
 .sub-page {
   width: auto;
-  height: calc(100vh - 90px - 38px);
-  padding: 30px;
+  background-color: #107CFF;
 }
 
 .sub-item {
@@ -346,9 +345,12 @@
   margin-bottom: 0.2rem;
   padding: 1rem 0;
   border-bottom: 5px solid;
-  color: #333;
   font-size: 36px;
-  font-weight: bold;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #fff;
 }
 
 .sub-item::before {
@@ -367,21 +369,37 @@
   margin-bottom: 30px;
 }
 
-.sneaker-img {
-  padding-top: 30px;
-  padding-left: 30px;
+
+.sneaker-img img {
+  box-shadow: 0 0 10px 5px #000;
 }
 
 .item-text {
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 26px;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #fff;
 }
 
 .item-money {
   margin-top: 30px;
   margin-bottom: 30px;
-  font-size: 16px;
-  color: #ff32fe;
+  font-size: 40px;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+.size {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  color: #fff;
 }
 
 .selectbox-size {
@@ -451,8 +469,8 @@
 }
 
 .buy-color {
+  width: 100%;
   background-color: #107CFF;
-  height: calc(100vh - 90px - 38px);
 }
 
 .present-box {
@@ -656,6 +674,22 @@
 
   /* ーーーーーーーーーーザキstartーーーーーーーーーーーーーーー */
 
+  .sub-page {
+    height: calc(100vh - 90px - 38px);
+    padding: 30px;
+  }
+
+  .sneaker-img {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .buy-color {
+    height: calc(100vh - 90px - 38px);
+  }
+  
+
+
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
@@ -723,13 +757,42 @@
     gap: 25px;
   }
 
+  .sub-page {
+    padding: 20px 15px 15px 15px; 
+  }
+
   .sneaker-menu {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    margin: 30px;
+    text-align: center;
   }
 
+  .sneaker-img {
+    width: 100%;
+
+  }
+
+  .sneaker-img img {
+    width: 100%;
+  }
+
+  .buy-btn {
+    margin-left: 0;
+  }
+
+  .buy-color {
+    width: 100%;
+  }
+  
+  .present-box img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .thanks-buy {
+    padding-bottom: 30px;
+  }
 
 
 
