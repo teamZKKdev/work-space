@@ -32,30 +32,43 @@ bar.animate(1.0, function () {
 
 // ヘッダーの色変えーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 $(function () {
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 0) {
-            $(".header").addClass("changeColor");
-        } else {
-            $(".header").removeClass("changeColor");
-        }
-    });
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 0) {
+                $(".header").removeClass("changeColor");
+            } else {
+                $(".header").addClass("changeColor");
+            }
+        });
+    }
+});
+
+// トップページのときだけヘッダーを固定するーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+$(document).ready(function () {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        $('.header').addClass('headerFixed');
+    } else {
+        $('.header').removeClass('headerFixed');
+    }
 });
 
 //ヘッダーの出し入れーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 let startPos = 0;
 let winScrollTop = 0;
 $(function () {
-    $(window).on('scroll', function () {
-        winScrollTop = $(this).scrollTop();
-        if (winScrollTop >= startPos) {
-            if (winScrollTop >= 200) {
-                $('.header').addClass('hide');
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        $(window).on('scroll', function () {
+            winScrollTop = $(this).scrollTop();
+            if (winScrollTop >= startPos) {
+                if (winScrollTop >= 200) {
+                    $('.header').addClass('hide');
+                }
+            } else {
+                $('.header').removeClass('hide');
             }
-        } else {
-            $('.header').removeClass('hide');
-        }
-        startPos = winScrollTop;
-    });
+            startPos = winScrollTop;
+        });
+    }
 });
 
 // kv部分のテキスト表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
@@ -85,7 +98,6 @@ function TextTypingAnime() {
 }
 
 $(window).on('load', function () {
-    //spanタグを追加する
     let element = $(".kv_text");
     element.each(function () {
         let text = $(this).html();
@@ -112,7 +124,7 @@ $(document).ready(function () {
     });
 });
 
-
+// メニューリンククリックでハンバーガーメニューが自動で閉じるーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
 $(function () {
     $('.header_menuItemLink').on('click', function () {
         $('.header').removeClass('active');
@@ -126,7 +138,7 @@ $(function () {
         let href = $(this).attr("href");
         let target = $(href == "#" || href == "" ? 'html' : href);
         let position = target.offset().top;
-        $("html, body").animate({ scrollTop: position }, 300, "swing");
+        $("html, body").animate({ scrollTop: position }, 1000, "swing");
         return false;
     });
 });

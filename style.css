@@ -10,10 +10,6 @@
 
 /* PC・SP共通用 */
 /* ーーーーーーーーーーカナstartーーーーーーーーーーーーーーー */
-html {
-  scroll-behavior: smooth;
-}
-
 /* ーーーーーーーーーーーーーーーーーーーーロード画面ーーーーーーーーーーーーーーーーーーーー */
 #loading {
   position: fixed;
@@ -38,8 +34,7 @@ html {
 
 
 .header {
-  background-color: transparent;
-  position: fixed;
+  background-color: #fff;
   z-index: 100;
   display: flex;
   width: 100vw;
@@ -47,17 +42,21 @@ html {
   transition: 0.5s;
 }
 
+.headerFixed {
+  position: fixed;
+}
+
 .header.changeColor {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .header_logoText {
   font-weight: normal;
-  color: #fff;
+  color: #000;
 }
 
 .changeColor .header_logoText {
-  color: #000;
+  color: #fff;
 }
 
 
@@ -79,7 +78,7 @@ html {
 .header_hamburgerLine {
   display: block;
   content: "";
-  background-color: #fff;
+  background-color: #000;
   height: 2px;
   width: 35px;
   margin: 0 auto;
@@ -102,7 +101,7 @@ html {
 }
 
 .changeColor .header_hamburgerLine {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .header.hide {
