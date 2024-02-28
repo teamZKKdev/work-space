@@ -267,6 +267,7 @@ html {
 .pick {
   text-align: center;
   font-size: 38px;
+  margin-top: 30px;
 }
 
 .sabmain {
@@ -289,6 +290,9 @@ html {
 }
 
 .grid-box {
+  display: block;
+  text-decoration: none;
+  color: #000;
   box-shadow: 0 0 10px 5px #ccc;
   opacity: 0;
   transform: translate(0, 0);
@@ -333,7 +337,9 @@ html {
 }
 
 .sub-page {
-  display: flex;
+  width: auto;
+  height: auto;
+  padding: 30px;
 }
 
 .sub-item {
@@ -356,19 +362,15 @@ html {
 }
 
 .sneaker-menu {
-  display: flex;
-  align-items: center; /* センター揃え */
-  margin: 50px; /* 適切なマージンを追加 */
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
 }
 
-.sneaker-img img {
-  max-width: 100%; /* 画像が親要素内に収まるように */
-  height: auto; /* アスペクト比を保つために自動調整 */
-  margin-right: 40px;
-}
-
-.sneaker-boxs {
-  margin-left: 60px; /* ボックスと画像の間に適切なスペースを追加 */
+.sneaker-img {
+  padding-top: 30px;
+  padding-left: 30px;
 }
 
 .item-text {
@@ -417,9 +419,40 @@ html {
   outline: none;
 }
 
+
+
 .buy-btn {
-  margin-right: 30px;
+  margin-top: 20px;
+  margin-left: 30px;
+  display: inline-block;
+  color: #fff; /* 文字色 */
+  font-weight: bold; /* 文字の太さ */
+  width: 100%;
+  max-width: 140px; /* ボタン幅 */
+  text-decoration: none;
+  border: 2px solid #040404; /* 線の色 */
+  padding: 1em 2em;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #fff 0%, #fff 50%, #040404 50%, #060505 100%); /* 背景色(マウスオーバー後→前) */
+  transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+.buy-btn_arrow {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+/* マウスオーバーした際のデザイン */
+.buy-btn:hover {
+  background-position: 0 0;
+  color: #000; /* 文字色 */
+}
+
 
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
@@ -669,8 +702,19 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
-
   }
+
+  .sneaker-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 30px;
+  }
+
+
+
+
+
 
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
