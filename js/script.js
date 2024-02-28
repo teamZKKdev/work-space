@@ -185,6 +185,20 @@ $(window).scroll(function () {
         }
     });
 });
+
+//お買い上げありがとう
+const CLASSNAME = "-visible";
+const TIMEOUT = 1500;
+const $target = $(".thanks-buy");
+
+$(function () {
+    setInterval(() => {
+    $target.addClass(CLASSNAME);
+    setTimeout(() => {
+        $target.removeClass(CLASSNAME);
+    }, TIMEOUT);
+    }, TIMEOUT * 2);
+});
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 

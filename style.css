@@ -355,7 +355,7 @@
 
 .sub-page {
   width: auto;
-  background-color: #107CFF;
+  background-color: #0F8CFD;
 }
 
 .sub-item {
@@ -488,7 +488,7 @@
 
 .buy-color {
   width: 100%;
-  background-color: #107CFF;
+  background-color: #0F8CFD;
 }
 
 .present-box {
@@ -498,14 +498,96 @@
 }
 
 .thanks-buy {
-  width: 100%;
-  text-align: center;
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 50px;
-  color: #fff;
-}
+    display: flex;
+    overflow: hidden;
+    /* width: 100%; */
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    /* font-weight: 400; */
+    font-style: normal;
+    font-size: 50px;
+    color: #fff;
+  }
+  
+  .thanks-buy span {
+    display: block;
+    transform: translate(0, 105%);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+  }
+  
+  .thanks-buy.-visible span {
+    transform: translate(0, 0);
+  }
+  
+  .thanks-buy span:nth-child(2) {
+    transition-delay: 0.06s;
+  }
+  .thanks-buy span:nth-child(3) {
+    transition-delay: 0.12s;
+  }
+  .thanks-buy span:nth-child(4) {
+    transition-delay: 0.18s;
+  }
+  .thanks-buy span:nth-child(5) {
+    transition-delay: 0.24s;
+  }
+  .thanks-buy span:nth-child(6) {
+    transition-delay: 0.30s;
+  }
+  .thanks-buy span:nth-child(7) {
+    transition-delay: 0.36s;
+  }
+  .thanks-buy span:nth-child(8) {
+    transition-delay: 0.42s;
+  }
+  .thanks-buy span:nth-child(9) {
+    transition-delay: 0.48s;
+  }
+  .thanks-buy span:nth-child(10) {
+    transition-delay: 0.54s;
+  }
+  .thanks-buy span:nth-child(11) {
+    transition-delay: 0.6s;
+  }
+  .thanks-buy span:nth-child(12) {
+    transition-delay: 0.66s;
+  }
+  .thanks-buy span:nth-child(13) {
+    transition-delay: 0.72s;
+  }
+  .thanks-buy span:nth-child(14) {
+    transition-delay: 0.78s;
+  }
+  .thanks-buy span:nth-child(15) {
+    transition-delay: 0.82s;
+  }
+  .thanks-buy span:nth-child(16) {
+    transition-delay: 0.86s;
+  }
+  .thanks-buy span:nth-child(17) {
+    transition-delay: 0.90s;
+  }
+  .thanks-buy span:nth-child(18) {
+    transition-delay: 0.94s;
+  }
+  .thanks-buy span:nth-child(19) {
+    transition-delay: 0.96s;
+  }
+  .thanks-buy span:nth-child(20) {
+    transition-delay: 0.98s;
+  }
+  .thanks-buy span:nth-child(21) {
+    transition-delay: 1s;
+  }
+  .thanks-buy span:nth-child(22) {
+    transition-delay: 1s;
+  }
+  .thanks-buy span:nth-child(23) {
+    transition-delay: 1s;
+  }
+  .thanks-buy span:nth-child(24) {
+    transition-delay: 1s;
+  }
 
 
 
