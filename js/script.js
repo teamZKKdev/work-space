@@ -35,9 +35,9 @@ $(function () {
     if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
         $(window).on("scroll", function () {
             if ($(this).scrollTop() > 0) {
-                $(".header").removeClass("changeColor");
-            } else {
                 $(".header").addClass("changeColor");
+            } else {
+                $(".header").removeClass("changeColor");
             }
         });
     }
@@ -118,7 +118,7 @@ $(window).on('load', function () {
 });
 
 // ハンバーガーメニュー開閉トグルーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-$(document).ready(function () {
+$(function () {
     $(".header_hamburger").click(function () {
         $(".header").toggleClass('active');
     });

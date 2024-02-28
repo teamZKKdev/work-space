@@ -34,7 +34,7 @@
 
 
 .header {
-  background-color: #fff;
+  background-color: transparent;
   z-index: 100;
   display: flex;
   width: 100vw;
@@ -47,16 +47,29 @@
 }
 
 .header.changeColor {
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .header_logoText {
   font-weight: normal;
-  color: #000;
+  color: #fff;
 }
 
 .changeColor .header_logoText {
-  color: #fff;
+  color: #000;
+}
+
+.header_fixMenuArea {
+  display: flex;
+  gap: 15px;
+}
+
+.header_fixMenuArea.header_menuItem {
+  width: 50px;
+}
+
+.header_menuItemImg {
+  width: 50px;
 }
 
 
@@ -78,7 +91,7 @@
 .header_hamburgerLine {
   display: block;
   content: "";
-  background-color: #000;
+  background-color: #fff;
   height: 2px;
   width: 35px;
   margin: 0 auto;
@@ -101,7 +114,7 @@
 }
 
 .changeColor .header_hamburgerLine {
-  background-color: #fff;
+  background-color: #000;
 }
 
 .header.hide {
