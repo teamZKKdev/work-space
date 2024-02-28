@@ -34,7 +34,7 @@
 
 
 .header {
-  background-color: transparent;
+  background-color: #0F8CFD;
   z-index: 100;
   display: flex;
   width: 100vw;
@@ -53,6 +53,7 @@
 .header_logoText {
   font-weight: normal;
   color: #fff;
+  text-decoration: none;
 }
 
 .changeColor .header_logoText {
@@ -70,6 +71,10 @@
 
 .header_menuItemImg {
   width: 50px;
+}
+
+.header_fixMenuItem {
+  list-style: none;
 }
 
 
