@@ -29,28 +29,12 @@
                     </ul>
                     <ul class="contact-list">
                         <li><h5>Message: </h5></li>
-                        <li><?php echo isset($_POST["inquiry"]) ? nl2br(htmlspecialchars($_POST["inquiry"])) : "" ?></li>
+                        <li class="confirmation-message"><?php echo isset($_POST["inquiry"]) ? nl2br(htmlspecialchars($_POST["inquiry"])) : "" ?></li>
                     </ul>
                 </div>
-
-                <!-- <div class="data">
-                    <dl>
-                        <dt>Name: </dt>
-                        <dd><?php echo isset($_POST["username"]) ? htmlspecialchars($_POST["username"]) : "" ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>Mail: </dt>
-                        <dd><?php echo isset($_POST["useremail"]) ? htmlspecialchars($_POST["useremail"]) : "" ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>Message: </dt>
-                        <dd><?php echo isset($_POST["inquiry"]) ? htmlspecialchars($_POST["inquiry"]) : "" ?></dd>
-                    </dl>
-                </div> -->
-
                 <div class="submit">
                     <!--戻るを押すと前の画面に遷移-->
-                    <button type="button" onclick="history.back(-1)">戻る</button><button>送信</button>
+                    <button type="button" onclick="history.back(-1)" class="submit-btn">戻る</button><button class="submit-btn">送信</button>
                 </div>
 
                 <!-- <input type="submit" value="送信" /> -->

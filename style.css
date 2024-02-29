@@ -561,12 +561,25 @@
   color: #202020;
   background-color: #fff;
 }
-#contact .tothetop img {
-  width: 100px;
-  height: 90px;
-  border-radius: 50%;
-  
+.tothetop {
+  position:fixed;
+  right:10px;
+  bottom:0px;
+  cursor:pointer;
+  z-index: 10;
 }
+#contact .tothetop img {
+  width: 230px;
+  height: auto;
+  border-radius: 20%;
+  margin: 0 30px 20px 0;
+}
+#contact .tothetop img:hover {
+  opacity: 0.7;
+}
+/* #contact .tothetop .toppicture {
+  filter: drop-shadow(-30px, 10px, 4px, rgb(255,255,255));
+} */
 
 #footer {
   color: #fff;
@@ -584,6 +597,31 @@
   padding: 50px 0;
   width: auto;
   overflow-x: hidden;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: inline-block;
+  color: #040404; /* 文字色 */
+  font-weight: bold; /* 文字の太さ */
+  width: 100%;
+  max-width: 140px; /* ボタン幅 */
+  text-decoration: none;
+  border: 2px solid #040404; /* 線の色 */
+  padding: 1em 2em;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #040404 0%, #040404 50%, #fff 50%, #fff 100%); /* 背景色(マウスオーバー後→前) */
+  transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.submit-btn:hover {
+  background-position: 0 0;
+  color: #fff; /* 文字色 */
 }
 
 #confirmation .confirmation-form {
@@ -617,7 +655,7 @@
   display: flex;
   justify-content: center;
   margin: 0.5em;
-  width: 50%;
+  width: 70%;
   font-weight: bold;
 }
 
@@ -626,12 +664,13 @@
 }*/
 
 #confirmation ul {
-  /*リストの左寄せ（必要ならコメント解除）
-  padding-left: 0;*/
-  /* padding: 20px; */
+  /*リストの左寄せ（必要ならコメント解除）*/
+  padding-left: 0;
+  padding: 20px;
   justify-content: center;
   margin-bottom: 10%;
   border-bottom: solid 1px #fff;
+  width: auto;
 }
 /* 確認画面のリストの点消し */
 #confirmation .contact-group .contact-list li {
@@ -639,13 +678,24 @@
   font-size: large;
   width: 100%;
 }
+.contact-list {
+  margin: 20px;
+}
 
 /*thanks画面*/
-#thanks .thanksform {
+#thanks .thanks-form {
   display: flex;
-  justify-content: center;
+  /* justify-content: center;*/
+  flex-direction: column;
+  align-items: center;
 }
-.mask-bg {
+#thanks .thanks-form .message {
+  margin: 10px;
+  font-size: large;
+}
+/*ボタンのクラスは変えた方がいいかも？*/
+
+/* .mask-bg {
   color: transparent;
   display: inline-block;
   font-size: 40px;
@@ -664,10 +714,10 @@
   top: 0;
   transform: translate(0, 100%);
   }
-  .mask-bg .is-animated {
+  .mask-bg .animated {
     color: #362ae0;
   }
-  .mask-bg .is-animated::after {
+  .mask-bg .animated::after {
     animation: mask-bg 1.2s cubic-bezier(0.8, 0, 0.170, 1);
   }
 
@@ -681,7 +731,7 @@
     100% {
       transform: translate(0, -100%)
     }
-  }
+  } */
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
@@ -872,7 +922,7 @@
 
   /* ーーーーーーーーーーコウstartーーーーーーーーーーーーーーー */
   #contact {
-    padding: 80px 0;
+    padding: 80px 0 120px 0;
   }
 
   #contact .content {
@@ -894,7 +944,18 @@
     width: 100%;
   }
 
+  #contact .tothetop img {
+    width: 140px;
+    height: auto;
+  }
   /*確認画面のmessage部分もsp設定必要*/
 
+  /*確認画面*/
+  #confirmation ul {
+    width: 300px;
+  }
+  .confirmation-message {
+    word-wrap: break-word;
+  }
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 }
