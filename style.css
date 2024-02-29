@@ -490,19 +490,180 @@
   background-color: #0F8CFD;
 }
 
+/* loading用 */
+
+#loading-body {
+  background-color: #222;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 500;
+}
+
+.header.thanks {
+  position: relative;
+}
+
+#loading-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+#loading-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #999;
+  width: 100px;
+  height: 30px;
+  margin: -7px 0 0 -45px;
+  text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 20px;
+}
+
+
+#loading-content {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+  border: 3px solid #F00;
+}
+
+#loading-content:after {
+  content: "";
+  position: absolute;
+  border: 3px solid #0F0;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+#loading-content:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #00F;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+
+#loading-content {
+  border: 3px solid transparent;
+  border-top-color: #4D658D;
+  border-bottom-color: #4D658D;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+#loading-content:before {
+  border: 3px solid transparent;
+  border-top-color: #D4CC6A;
+  border-bottom-color: #D4CC6A;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 3s linear infinite;
+}
+
+#loading-content:after {
+  border: 3px solid transparent;
+  border-top-color: #84417C;
+  border-bottom-color: #84417C;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+#content-wrapper {
+  color: #FFF;
+  position: fixed;
+  left: 0;
+  top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* #header
+{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100px;
+  background-color: #666;
+} */
+
+/* #content
+{
+  width: 800px;
+  height: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #888;
+} */
+
+/* loading用END */
+
+
 .present-box {
   display: block;
   text-align: center;
   padding-top: 30px;
 }
 
+
+
+
 .thanks-buy {
     display: flex;
     overflow: hidden;
-    /* width: 100%; */
+    width: 100%;
     text-align: center;
+    justify-content: center;
     font-family: "Anton", sans-serif;
-    /* font-weight: 400; */
+    font-weight: 400;
     font-style: normal;
     font-size: 50px;
     color: #fff;
@@ -647,12 +808,25 @@
   color: #202020;
   background-color: #fff;
 }
-#contact .tothetop img {
-  width: 100px;
-  height: 90px;
-  border-radius: 50%;
-  
+.tothetop {
+  position:fixed;
+  right:10px;
+  bottom:0px;
+  cursor:pointer;
+  z-index: 10;
 }
+#contact .tothetop img {
+  width: 230px;
+  height: auto;
+  border-radius: 20%;
+  margin: 0 30px 20px 0;
+}
+#contact .tothetop img:hover {
+  opacity: 0.7;
+}
+/* #contact .tothetop .toppicture {
+  filter: drop-shadow(-30px, 10px, 4px, rgb(255,255,255));
+} */
 
 #footer {
   color: #fff;
@@ -670,6 +844,31 @@
   padding: 50px 0;
   width: auto;
   overflow-x: hidden;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: inline-block;
+  color: #040404; /* 文字色 */
+  font-weight: bold; /* 文字の太さ */
+  width: 100%;
+  max-width: 140px; /* ボタン幅 */
+  text-decoration: none;
+  border: 2px solid #040404; /* 線の色 */
+  padding: 1em 2em;
+  text-align: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #040404 0%, #040404 50%, #fff 50%, #fff 100%); /* 背景色(マウスオーバー後→前) */
+  transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.submit-btn:hover {
+  background-position: 0 0;
+  color: #fff; /* 文字色 */
 }
 
 #confirmation .confirmation-form {
@@ -703,7 +902,7 @@
   display: flex;
   justify-content: center;
   margin: 0.5em;
-  width: 50%;
+  width: 70%;
   font-weight: bold;
 }
 
@@ -712,12 +911,13 @@
 }*/
 
 #confirmation ul {
-  /*リストの左寄せ（必要ならコメント解除）
-  padding-left: 0;*/
-  /* padding: 20px; */
+  /*リストの左寄せ（必要ならコメント解除）*/
+  padding-left: 0;
+  padding: 20px;
   justify-content: center;
   margin-bottom: 10%;
   border-bottom: solid 1px #fff;
+  width: auto;
 }
 /* 確認画面のリストの点消し */
 #confirmation .contact-group .contact-list li {
@@ -725,13 +925,24 @@
   font-size: large;
   width: 100%;
 }
+.contact-list {
+  margin: 20px;
+}
 
 /*thanks画面*/
-#thanks .thanksform {
+#thanks .thanks-form {
   display: flex;
-  justify-content: center;
+  /* justify-content: center;*/
+  flex-direction: column;
+  align-items: center;
 }
-.mask-bg {
+#thanks .thanks-form .message {
+  margin: 10px;
+  font-size: large;
+}
+/*ボタンのクラスは変えた方がいいかも？*/
+
+/* .mask-bg {
   color: transparent;
   display: inline-block;
   font-size: 40px;
@@ -750,10 +961,10 @@
   top: 0;
   transform: translate(0, 100%);
   }
-  .mask-bg .is-animated {
+  .mask-bg .animated {
     color: #362ae0;
   }
-  .mask-bg .is-animated::after {
+  .mask-bg .animated::after {
     animation: mask-bg 1.2s cubic-bezier(0.8, 0, 0.170, 1);
   }
 
@@ -767,7 +978,7 @@
     100% {
       transform: translate(0, -100%)
     }
-  }
+  } */
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 
 
@@ -935,8 +1146,10 @@
     margin-left: 0;
   }
 
+  
   .buy-color {
     width: 100%;
+    height: calc(100vh - 90px - 38px);
   }
   
   .present-box img {
@@ -945,12 +1158,9 @@
   }
 
   .thanks-buy {
+    font-size: 20px;
     padding-bottom: 30px;
   }
-
-
-
-
 
 
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
@@ -958,7 +1168,7 @@
 
   /* ーーーーーーーーーーコウstartーーーーーーーーーーーーーーー */
   #contact {
-    padding: 80px 0;
+    padding: 80px 0 120px 0;
   }
 
   #contact .content {
@@ -980,7 +1190,18 @@
     width: 100%;
   }
 
+  #contact .tothetop img {
+    width: 140px;
+    height: auto;
+  }
   /*確認画面のmessage部分もsp設定必要*/
 
+  /*確認画面*/
+  #confirmation ul {
+    width: 300px;
+  }
+  .confirmation-message {
+    word-wrap: break-word;
+  }
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
 }

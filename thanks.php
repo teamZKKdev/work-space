@@ -27,14 +27,14 @@
         </nav>
     </header>
     <section id="thanks">
-        <form action="index.html" method="post">
-            <div class="mask-bg anim">
+        <div class="mask-bg anim">
+            <form action="index.html" method="post">
                 <div class="thanks-form">
-                    <h2>お問い合わせ送信完了</h2>
+                    <h1 class="message">お問い合わせ送信完了</h1>
                     <p class="message">
                         お問い合わせありがとうございます。1営業日以内にご返信させていただきます。
                     </p>
-                    <button type="submit" name="topback">TOPへ戻る</button>
+                    <button type="submit" name="topback" class="message">TOPへ戻る</button>
                     <!--topへ戻るボタンを押すと入力していた値を消してtopへ戻る処理-->
                     <?php
                         if(isset($_POST["topback"])){
@@ -46,8 +46,9 @@
                         }
                     ?>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
+        
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
