@@ -1,10 +1,6 @@
-
-
-
-
 //お買い上げありがとう
 const CLASSNAME = "-visible";
-const TIMEOUT = 1500;
+const TIMEOUT = 2000;
 const $target = $(".thanks-buy");
 
     setInterval(() => {
