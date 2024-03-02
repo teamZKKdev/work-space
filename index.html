@@ -146,7 +146,9 @@
 
       <!-- ーーーーーーーーーーーーーーーコウstartーーーーーーーーーーーーーーー -->
       <section id="contact">
-        <h2 class="contact-title">CONTACT</h2>
+        <div class="index-title">
+          <h1 class="contact-title">CONTACT</h1>
+        </div>
         <div class="content">
           <div class="info">
             <p>
@@ -155,17 +157,14 @@
               必要事項をご入力の上、確認ボタンをクリックしてください。
             </p>
           </div>
-
           <!--入力画面-->
           <div class="contact-form">
             <form action="confirmation.php" method="post">
               <dl>
                 <dt><label for="name">Name: </label></dt>
                 <dd><input type="text" id="name" name="username" placeholder="靴 履太郎" required></dd>
-
                 <dt><label for="email">Mail: </label></dt>
                 <dd><input type="text" id="email" name="useremail" placeholder="sneakers@sneakers.com" required></dd>
-
                 <dt><label for="message">Message: </label></dt>
                 <dd><textarea id="message" name="inquiry" cols="10" wrap="hard" required></textarea></dd>
               </dl>
@@ -173,7 +172,6 @@
             </form>
           </div>
         </div>
-
         <div class="tothetop">
           <a href="#top" target="_blank">
             <img src="img/ReturntoTo.png" alt="TOPへ戻る" class="toppicture">

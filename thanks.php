@@ -26,15 +26,32 @@
             </ul>
         </nav>
     </header>
+    <!-- ロード画面 -->
+    <!-- <div id="loading-contents">
+        <div class="loading-area">
+            <span>送</span>
+            <span>信</span>
+            <span>中</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+        </div>
+    </div> -->
+
     <section id="thanks">
         <div class="mask-bg anim">
             <form action="index.html" method="post">
                 <div class="thanks-form">
                     <h1 class="message">お問い合わせ送信完了</h1>
-                    <p class="message">
+                    <h4 class="message">
                         お問い合わせありがとうございます。1営業日以内にご返信させていただきます。
+                    </h4>
+                    <p class="clear-message">
+                        ※ご入力内容を記載した確認メールを送信しました。<br>
+                        ※ご確認メールが24時間経過しても届かない場合は、恐れ入りますが、再度お問い合わせください。<br>
+                        ※返信にお時間を頂く場合がございます。予めご了承ください。<br>
                     </p>
-                    <button type="submit" name="topback" class="message">TOPへ戻る</button>
+                    <button type="submit" name="topback" class="message-btn">TOPへ戻る</button>
                     <!--topへ戻るボタンを押すと入力していた値を消してtopへ戻る処理-->
                     <?php
                         if(isset($_POST["topback"])){
