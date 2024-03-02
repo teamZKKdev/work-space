@@ -212,5 +212,59 @@ $(function(){
       scrollTop: 0},500);
       return false;
     });
-  });
+    });
+
+// loading画面
+$(document).ready(function() {
+    $("loading-contents").fadeIn().queue(function() {
+        setTimeout(function(){$("loading-contents").dequeue();
+    }, 3000);
+    });
+    $("loading-contents").fadeOut();
+})
+
+
+// document.addEventListener("DOMContentLoaded", function(){
+//     // 画面が読み込まれたら非表示にする
+//     hideLoading();
+// });
+
+// // 一定時間後に非表示にする関数
+// function hideLoading() {
+//     var loadingContents = document.getElementById("loading-contents");
+//     if(loadingContents) {
+//         loadingContents.style.display = "none";
+//     }
+// }
+
+// // 画面の非表示後画面を表示する処理
+// document.addEventListener("DOMContentLoaded", function(){
+//     hideLoadingAndShowThanks();
+// });
+
+// // 非表示後thanksページを表示する関数
+// function hideLoadingAndShowThanks() {
+//     var loadingContents = document.getElementById("loading-contents");
+//     var thanksSection = document.getElementById("thanks");
+//     if(loadingContents && thanksSection) {
+//         loadingContents.style.display = "none";
+//         thanksSection.style.display = "block";
+//     }
+// }
+
+// document.addEventListener("thanksMessageLoaded", function(){
+//     // 一定の時間が経過したらアニメーションを消す
+//     setTimeout(function() {
+//         var animatedElement = document.getElementById("loading-contents");
+//         if(animatedElement) {
+//             animatedElement.style.animation = "none";   // アニメーションを解除
+//         }
+//     }, 5000);   //  5秒後にアニメーションを解除
+// });
+
+// const loading = document.querySelector('.loading-contents');
+
+// window.addEventListener('load', () => {
+//     loading.classList.add('hide');
+// }, false);
 /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */

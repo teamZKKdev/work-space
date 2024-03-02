@@ -759,14 +759,44 @@
   color: #fff;
   background-color: #121212;
   padding: 50px 0;
+  font-family: "Anton", sans-serif;
 }
 
-#contact .contact-title,
+#contact {
+  background: url(img/feature6.jpg);
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+}
+
+#contact::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /*背景よりも前面に表示*/
+  z-index: 1;
+}
+
 #confirmation .title {
   color: #fff;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+}
+
+.index-title {
+  color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  position: relative;
 }
 
 #contact .content {
@@ -785,6 +815,7 @@
 #contact .info,
 #contact .contact-form {
   width: 45%;
+  z-index: 2;
 }
 
 #contact .contact-form input,
@@ -808,6 +839,7 @@
   color: #202020;
   background-color: #fff;
 }
+
 .tothetop {
   position:fixed;
   right:10px;
@@ -815,18 +847,17 @@
   cursor:pointer;
   z-index: 10;
 }
+
 #contact .tothetop img {
   width: 230px;
   height: auto;
   border-radius: 20%;
   margin: 0 30px 20px 0;
 }
+
 #contact .tothetop img:hover {
   opacity: 0.7;
 }
-/* #contact .tothetop .toppicture {
-  filter: drop-shadow(-30px, 10px, 4px, rgb(255,255,255));
-} */
 
 #footer {
   color: #fff;
@@ -844,9 +875,11 @@
   padding: 50px 0;
   width: auto;
   overflow-x: hidden;
+  font-family: "Anton", sans-serif;
 }
 
-.submit-btn {
+.submit-btn,
+ #thanks .message-btn {
   margin-top: 20px;
   margin-left: 30px;
   display: inline-block;
@@ -866,7 +899,9 @@
   transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
   -webkit-transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.submit-btn:hover {
+
+.submit-btn:hover, 
+#thanks .message-btn:hover {
   background-position: 0 0;
   color: #fff; /* 文字色 */
 }
@@ -875,22 +910,12 @@
   display: flex;
   justify-content: center;
 }
-/* #confirmation .confirmation-form .contact-group {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
 
 #confirmation .confirmation-info {
   padding: 20px;
-  margin-bottom: 30px;
+  /* margin-bottom: 15px; */
   display: flex;
   justify-content: center;
-}
-
-#confirmation .confirmation-form table {
-  height: 25vh;
-  width: 30vw;
 }
 
 #confirmation .submit {
@@ -906,12 +931,8 @@
   font-weight: bold;
 }
 
-/*#confirmation .data dl {
-  width: 100%;
-}*/
-
 #confirmation ul {
-  /*リストの左寄せ（必要ならコメント解除）*/
+  /*リストの左寄せ*/
   padding-left: 0;
   padding: 20px;
   justify-content: center;
@@ -919,28 +940,106 @@
   border-bottom: solid 1px #fff;
   width: auto;
 }
+.contact-group {
+  margin-bottom: 50px;
+}
+
 /* 確認画面のリストの点消し */
 #confirmation .contact-group .contact-list li {
   list-style: none;
   font-size: large;
   width: 100%;
 }
+
 .contact-list {
   margin: 20px;
 }
 
+/* ローディング画面*/
+#loading-contents {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* box-sizing: border-box; */
+  background-color: #fff;
+  overflow: hidden;
+
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.loading-area {
+  display: flex;
+  justify-content: center;
+  gap: 5px
+}
+
+.loading-area span {
+  display: inline-block;
+  color: #000;
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: rotate 2s infinite linear;
+  text-transform: uppercase;
+}
+
+.loading-area span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-area span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-area span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loading-area span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loading-area span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+@keyframes rotate {
+  70% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
 /*thanks画面*/
+/* #thanks {
+  font-family: "Anton", sans-serif;
+} */
+
 #thanks .thanks-form {
   display: flex;
   /* justify-content: center;*/
   flex-direction: column;
   align-items: center;
 }
+
 #thanks .thanks-form .message {
-  margin: 10px;
-  font-size: large;
+  margin: 20px;
+  font-family: "Anton", sans-serif;
 }
-/*ボタンのクラスは変えた方がいいかも？*/
+
+.clear-message {
+  color: #808080;
+  text-align: center;
+  margin: 20px 0 30px 0;
+}
 
 /* .mask-bg {
   color: transparent;
@@ -1063,7 +1162,7 @@
   }
   /*tothetopボタンのサイズ*/
   #contact .tothetop img {
-    width: 200px;
+    width: 160px;
     height: auto;
   }
   /* ーーーーーーーーーーendーーーーーーーーーーーーーーー */
