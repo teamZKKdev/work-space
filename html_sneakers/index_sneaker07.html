@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneakers</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- css追加ザキ -->
+    <link rel="stylesheet" href="../slick/slick.css">
+    <link rel="stylesheet" href="../slick/slick-theme.css">
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <h1><a href="../index.html" class="header_logoText">Sneakers</a></h1>
+        </div>
+        <nav class="header_fixMenu">
+            <ul class="header_fixMenuArea">
+                <li class="header_menuItem"><a class="header_fixMenuItemLink" href="https://twitter.com/?lang=ja"
+                    target="_blank" rel="noopener noreferrer"><img class="header_menuItemImg" src="../img/X.png" alt="X"></a>
+                </li>
+                <li class="header_menuItem"><a class="header_fixMenuItemLink" href="https://www.facebook.com/?locale=ja_JP"
+                    target="_blank" rel="noopener noreferrer"><img class="header_menuItemImg" src="../img/facebook.png" alt="Facebook"></a></li>
+                <li class="header_menuItem"><a class="header_fixMenuItemLink" href="https://www.instagram.com/" target="_blank"
+                    rel="noopener noreferrer"><img class="header_menuItemImg" src="../img/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ザキ作成メイン要素 -->
+
+    <main class="sub-page">
+        <form action="buy_thanks.php" method="post">
+            <div class="sneaker-menu">
+                <div class="sneaker-img">
+                    <img src="../img/feature7.jpg">
+                </div>
+                <div class="sneaker-boxs">
+                    <h1 class="sub-item">Sneaker007</h1>
+                    <p class="item-text">Staff recommended<br>Only a few left in stock</p>
+                    <p class="item-money">¥9,999 +tax</p>
+
+                    <h2 class="size">Select Size</h2>
+                    <label class="selectbox-size">
+                        <select>
+                            <option>S size</option>
+                            <option>M size</option>
+                            <option>L size</option>
+                        </select>
+                    </label>           
+                    <a class="buy-btn" href="./buy_thanks.html" >購入する</a>     
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; Sneakers</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../slick/slick.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
