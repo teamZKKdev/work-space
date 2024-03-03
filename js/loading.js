@@ -14,3 +14,10 @@ $(document).ready(function() {
   });
   $("#loading-body").fadeOut();
 });
+
+// 岡田loading
+$(function() {
+  setTimeout(function() {
+    $("#loading-contents").fadeOut();
+  }, 3500);
+});

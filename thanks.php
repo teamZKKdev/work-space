@@ -27,7 +27,7 @@
         </nav>
     </header>
     <!-- ロード画面 -->
-    <!-- <div id="loading-contents">
+    <div id="loading-contents">
         <div class="loading-area">
             <span>送</span>
             <span>信</span>
@@ -36,7 +36,7 @@
             <span>.</span>
             <span>.</span>
         </div>
-    </div> -->
+    </div>
 
     <section id="thanks">
         <div class="mask-bg anim">
@@ -70,5 +70,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/loading.js"></script>
 </body>
 </html>
