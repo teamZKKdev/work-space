@@ -215,13 +215,13 @@ $(function(){
     });
 
 // loading画面
-$(document).ready(function() {
-    $("loading-contents").fadeIn().queue(function() {
-        setTimeout(function(){$("loading-contents").dequeue();
-    }, 3000);
-    });
-    $("loading-contents").fadeOut();
-})
+// $(document).ready(function() {
+//     $("loading-contents").fadeIn().queue(function() {
+//         setTimeout(function(){$("loading-contents").dequeue();
+//     }, 3000);
+//     });
+//     $("loading-contents").fadeOut();
+// })
 
 
 // document.addEventListener("DOMContentLoaded", function(){
